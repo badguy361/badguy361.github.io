@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyComponent from './move';
 import Filled from './filled';
+import Transition from './transition';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
     <App />
     <MyComponent />
     <Filled />
+    <Transition />
   </BrowserRouter>
 );
 
