@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Home, Books, Electronics, Mobile, Desktop, Laptop } from './pages';
+import { Home, Books, Electronics, Mobile, Desktop, Laptop } from '../pages';
 import { Navbar } from './navbar';
 
 class App extends Component {
