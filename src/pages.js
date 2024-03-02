@@ -2,21 +2,24 @@
 
 import React from 'react';
 import scrollToAnchor from './scroll_anchor';
+import { Button, Image} from 'react-bootstrap';
 import styles from "./assets/css/styles.module.css";
-import { Button } from 'react-bootstrap';
+import profile from './assets/img/profile.jpg'
+import './assets/css/style.css';
+import 'boxicons/css/boxicons.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
   return(
-    <header id={styles.header}>
-      <div class="d-flex flex-column">
-
-        <div class="profile">
-          <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"/>
-          <h1 class="text-light"><Button variant="link" className={styles.navbar} >Joey</Button></h1>
-          <div class="social-links mt-3 text-center">
-            <Button variant="link" className={styles.navbar} id="github"><i class="bx bxl-github"></i>github</Button>
-            <Button variant="link" className={styles.navbar} id="facebook"><i class="bx bxl-facebook"></i>facebook</Button>
-            <Button variant="link" className={styles.navbar} id="linkedin"><i class="bx bxl-linkedin"></i>linkedin</Button>
+    <header id="header">
+      <div className="d-flex flex-column">
+        <div className="profile">
+          <Image src={profile} roundedCircle/>
+          <h1 className="text-light">Joey</h1>
+          <div className="social-links mt-3 text-center">
+            <i className="bx bxl-facebook-circle bx-md"></i>
+            <i className="bx bxl-github bx-md"></i>
+            <i className="bx bxl-linkedin bx-md"></i>
           </div>
         </div>
 
