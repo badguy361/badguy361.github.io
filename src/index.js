@@ -11,6 +11,7 @@ import Flip from './flip';
 import './assets/index.css'
 import MainPage from './mainpage';
 import { Navbar } from './pages';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

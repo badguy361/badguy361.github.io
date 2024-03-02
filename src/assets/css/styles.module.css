@@ -11,3 +11,8 @@
     background: #040b14;
     overflow-y: auto;
 }
+Button.navbar{
+    text-decoration:none;
+    color:rgb(221, 178, 178);
+    font-size: 18px;
+}
