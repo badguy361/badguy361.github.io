@@ -44,3 +44,16 @@ font-family: "Poppins", sans-serif;
     height: 36px;
     transition: 0.3s;
 }
+
+.nav-menu li {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 10px;
+  }
+
+.nav-menu Button{
+    padding-bottom: 15px;
+    text-decoration:none;
+    color:rgb(221, 178, 178);
+    font-size: 18px;
+}

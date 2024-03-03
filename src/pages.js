@@ -3,7 +3,6 @@
 import React from 'react';
 import scrollToAnchor from './scroll_anchor';
 import { Button, Image} from 'react-bootstrap';
-import styles from "./assets/css/styles.module.css";
 import profile from './assets/img/profile.jpg'
 import './assets/css/style.css';
 import 'boxicons/css/boxicons.min.css';
@@ -17,20 +16,21 @@ const Navbar = () => {
           <Image src={profile} roundedCircle/>
           <h1 className="text-light">Joey</h1>
           <div className="social-links mt-3 text-center">
-            <i className="bx bxl-facebook-circle bx-md"></i>
-            <i className="bx bxl-github bx-md"></i>
-            <i className="bx bxl-linkedin bx-md"></i>
+            <a href="https://www.facebook.com/profile.php?id=100003916017459"><i className="bx bxl-facebook-circle bx-md"></i></a>
+            <a href="https://github.com/badguy361"><i className="bx bxl-github bx-md"></i></a>
+            <a href="https://www.linkedin.com/in/chih-yu-chang-21aa32267/"><i className="bx bxl-linkedin bx-md"></i></a>
           </div>
         </div>
 
-        <nav id="navbar" class="nav-menu navbar">
+        <nav id="navbar" className="nav-menu navbar">
           <ul>
-            <li><Button variant="link" className={styles.navbar} onClick={() => scrollToAnchor('home')}><span>Home</span></Button></li>
-            <li><Button variant="link" className={styles.navbar} onClick={() => scrollToAnchor('about')}><span>About</span></Button></li>
-            <li><Button variant="link" className={styles.navbar} onClick={() => scrollToAnchor('resume')}><span>Resume</span></Button></li>
-            <li><Button variant="link" className={styles.navbar} onClick={() => scrollToAnchor('portfolio')}><span>Portfolio</span></Button></li>
-            <li><Button variant="link" className={styles.navbar} onClick={() => scrollToAnchor('services')}><span>Services</span></Button></li>
-            <li><Button variant="link" className={styles.navbar} onClick={() => scrollToAnchor('contact')}><span>Contact</span></Button></li>
+            <li className="bx bx-home"><Button variant="link" onClick={() => scrollToAnchor('home')}><span>Home</span></Button></li>
+            <br></br>
+            <li className="bx bx-notepad"><Button variant="link" onClick={() => scrollToAnchor('resume')}><span>Resume</span></Button></li>
+            <br></br>
+            <li className="bx bx-code-block"><Button variant="link" onClick={() => scrollToAnchor('portfolio')}><span>Portfolio</span></Button></li>
+            <br></br>
+            <li className="bx bx-message-dots"><Button variant="link" onClick={() => scrollToAnchor('contact')}><span>Contact</span></Button></li>
           </ul>
         </nav>
       </div>
