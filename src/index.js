@@ -9,8 +9,7 @@ import Transition from './transition';
 import Colorbox from './color_box';
 import Flip from './flip';
 import './assets/index.css'
-import MainPage from './mainpage';
-import { Navbar, HomePage } from './pages';
+import { Navbar, HomePage, AboutPage , ResumePage , ContactPage} from './pages';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +17,9 @@ root.render(
   <BrowserRouter>
     <Navbar />
     <HomePage />
-    <MainPage />
+    <AboutPage />
+    <ResumePage />
+    <ContactPage />
     <MyComponent />
     <Filled />
     <Transition />
