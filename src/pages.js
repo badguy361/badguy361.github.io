@@ -3,7 +3,6 @@
 import React from 'react';
 import scrollToAnchor from './scroll_anchor';
 import { Button, Image} from 'react-bootstrap';
-import profile from './assets/img/profile.jpg'
 import myself from './assets/img/myself.jpg'
 import './assets/css/style.css';
 import 'boxicons/css/boxicons.min.css';
