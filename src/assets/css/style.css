@@ -79,39 +79,27 @@ font-family: "Poppins", sans-serif;
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu li {
-    text-decoration: none;
     color: #fff;
-    padding-top: 10px;
-  }
+}
+
+.nav-menu li:hover{
+  color: #158ce7;
+  padding-top: 10px;
+}
 
 .nav-menu Button{
     padding-bottom: 15px;
-    text-decoration:none;
-    color:rgb(221, 178, 178);
+    text-decoration: none;
+    color:#ffffff;
     font-size: 18px;
 }
 
-.nav-menu li Button,
-.nav-menu li:focus Button {
-  font-size: 24px;
-  padding-right: 8px;
-  color: #6f7180;
-}
-
-.nav-menu li:hover,
-.nav-menu .active,
-.nav-menu .active:focus,
-.nav-menu li:hover>li {
+.nav-menu Button:hover{
   text-decoration: none;
-  color: #fff;
+  color:#158ce7;
+  font-size: 24px;
 }
 
-.nav-menu li:hover i,
-.nav-menu .active i,
-.nav-menu .active:focus i,
-.nav-menu li:hover>li i {
-  color: #149ddd;
-}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
