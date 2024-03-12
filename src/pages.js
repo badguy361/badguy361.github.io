@@ -63,14 +63,7 @@ const HomePage = () => {
 };
 
 const AboutPage = () => {
-  const { scrollYProgress } = useScroll();
-
   return(
-    <>
-    <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
     <section id="about" className="about">
     <main id="main">
       <div className="container">
@@ -115,7 +108,6 @@ const AboutPage = () => {
       </div>
     </main>
     </section>
-    </>
   )
 };
 
@@ -225,4 +217,14 @@ const ContactPage = () => {
     )
 };
 
-export { Navbar, HomePage, AboutPage, ResumePage, ContactPage};
+const ScrollAnimate = () => {
+  const { scrollYProgress } = useScroll();
+
+  return(
+    <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress , background: "#37b3ed"}}
+      />
+  )
+};
+export { Navbar, HomePage, AboutPage, ResumePage, ContactPage, ScrollAnimate};

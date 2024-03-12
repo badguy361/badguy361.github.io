@@ -8,14 +8,15 @@ import Filled from './filled';
 import Transition from './transition';
 import Colorbox from './color_box';
 import Flip from './flip';
-import './assets/index.css'
-import { Navbar, HomePage, AboutPage , ResumePage , ContactPage} from './pages';
+import { Navbar, HomePage, AboutPage , ResumePage , ContactPage, ScrollAnimate} from './pages';
 import "bootstrap/dist/css/bootstrap.min.css";
+import './assets/index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Navbar />
+    <ScrollAnimate />
     <HomePage />
     <AboutPage />
     <ResumePage />
