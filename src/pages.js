@@ -8,7 +8,7 @@ import './assets/css/style.css';
 import 'boxicons/css/boxicons.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { TypeAnimation } from 'react-type-animation';
-
+import { motion , useScroll } from "framer-motion"
 
 const Navbar = () => {
   return(
@@ -52,8 +52,6 @@ const HomePage = () => {
             'Hello, I\'m Data Analyst.',
             1000,
             'Hello, I\'m Website Developer.',
-            1000,
-            'Hello, I\'m AI engineer.',
             1000
           ]}
           wrapper="span"
@@ -65,7 +63,14 @@ const HomePage = () => {
 };
 
 const AboutPage = () => {
+  const { scrollYProgress } = useScroll();
+
   return(
+    <>
+    <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
     <section id="about" className="about">
     <main id="main">
       <div className="container">
@@ -80,7 +85,7 @@ const AboutPage = () => {
             <Image id="myself" src={myself} rounded/>
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>Data Analyst. &amp; Web Developer. &amp; AI engineer.</h3>
+              <h3>Data Analyst. &amp; Web Developer.</h3>
               <p className="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
@@ -88,15 +93,15 @@ const AboutPage = () => {
               <div className="row">
               <div className="col-lg-6">
                   <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>0975341915</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>台灣</span></li>
                   </ul>
               </div>
               <div className="col-lg-6">
                   <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>碩士</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>t1616joey1@gmail.com</span></li>
                   <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                   </ul>
               </div>
@@ -110,69 +115,60 @@ const AboutPage = () => {
       </div>
     </main>
     </section>
+    </>
   )
 };
 
 const ResumePage = () => {
-  return(
-    <section id="resume" class="resume">
+  return(  
+    <section id="resume" className="resume">
       <main id="main">
-      <div class="container">
+      <div className="container">
 
-          <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <div className="section-title">
+          <h2>簡歷(Resume)</h2>
+          <p>HI, 我是中央大學碩士二年級的學生，目前有接收網站開發任務，如有需求歡迎聯繫。</p>
           </div>
 
-          <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-              <h3 class="resume-title">Sumary</h3>
-              <div class="resume-item pb-0">
-              <h4>Alex Smith</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                  <li>Portland par 127,Orlando, FL</li>
-                  <li>(123) 456-7891</li>
-                  <li>alice.barkley@example.com</li>
-              </ul>
+          <div className="row">
+          <div className="col-lg-6" data-aos="fade-up">
+              <h3 className="resume-title">學歷</h3>
+              <div className="resume-item">
+              <h4>國立中央大學地球物理所</h4>
+              <h5>2022/08 - 2024/07</h5>
+              <p><em>Techs : Git · Sklearn · Pytorch · Github Action · Docker</em></p>
+              <h6>Project : AI 地震衰減式</h6>
+              <p>利用機器學習模型建構地震衰減式，並結合可解釋AI分析討論模型成效，對比於傳統使用方法預測效果可提升50%。</p>
               </div>
-
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-              </div>
-              <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+              <div className="resume-item">
+              <h4>國立中央大學地球科學學系</h4>
+              <h5>2018/08 - 2022/07</h5>
+              <p><em>Techs : Git · Django · IOT · HTML · CSS · Javascript</em></p>
+              <h6>Project : 即時監測宿舍浴設備使用情況系統</h6>
+              <p>與中大宿服組合作，架設IOT設備於宿舍公共衛浴設備建構一套即時監測網站系統，可供宿民即時得知當前設備使用狀況。</p>
+              <h6>Award : 2022中央大學社會創新競賽特優</h6>
               </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Professional Experience</h3>
-              <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 className="resume-title">工作經歷</h3>
+              <div className="resume-item">
+              <h4>中央大學圖書館網管</h4>
+              <h5>2022/09 - Present</h5>
+              <p><em>Techs : Mariadb · PHP · Apache · Dojo.js · HTML · CSS </em></p>
               <ul>
-                  <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                  <li>管理圖書館內部網站</li>
+                  <li>內部網站webserver、ssl、sql建置</li>
+                  <li>增修內部網站功能，自動化處理每日繁瑣事務</li>
               </ul>
               </div>
-              <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <div className="resume-item">
+              <h4>新創公司網站建置</h4>
+              <h5>2022/07 - 2022/08</h5>
+              <p><em>Techs : Git · Python · CI/CD · Django · Azure · SQL · cPanel · JavaScript · HTML · CSS</em></p>
               <ul>
-                  <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                  <li>從0建置新創公司頁面</li>
+                  <li>前端頁面設計、google地圖串接、資料庫建立、雲端伺服器管理</li>
+                  <li>增修內部網站功能，依需求建構新功能</li>
               </ul>
               </div>
           </div>
@@ -186,33 +182,33 @@ const ResumePage = () => {
 
 const ContactPage = () => {
   return(
-    <section id="contact" class="contact">
+    <section id="contact" className="contact">
       <main id="main">
-      <div class="container">
+      <div className="container">
 
-          <div class="section-title">
+          <div className="section-title">
           <h2>Contact</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
 
-          <div class="row" data-aos="fade-in">
+          <div className="row" data-aos="fade-in">
 
-          <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-              <div class="address">
-                  <i class="bi bi-geo-alt"></i>
+          <div className="col-lg-5 d-flex align-items-stretch">
+              <div className="info">
+              <div className="address">
+                  <i className="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
                   <p>A108 Adam Street, New York, NY 535022</p>
               </div>
 
-              <div class="email">
-                  <i class="bi bi-envelope"></i>
+              <div className="email">
+                  <i className="bi bi-envelope"></i>
                   <h4>Email:</h4>
                   <p>info@example.com</p>
               </div>
 
-              <div class="phone">
-                  <i class="bi bi-phone"></i>
+              <div className="phone">
+                  <i className="bi bi-phone"></i>
                   <h4>Call:</h4>
                   <p>+1 5589 55488 55s</p>
               </div>
