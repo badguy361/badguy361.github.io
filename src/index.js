@@ -8,7 +8,7 @@ import Filled from './filled';
 import Transition from './transition';
 import Colorbox from './color_box';
 import Flip from './flip';
-import { Navbar, HomePage, AboutPage , ResumePage , ContactPage, ScrollAnimate} from './pages';
+import { Navbar, HomePage, AboutPage , ResumePage , ContactPage, ScrollAnimate, ScrollView} from './pages';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './assets/index.css'
 
@@ -19,7 +19,7 @@ root.render(
     <ScrollAnimate />
     <HomePage />
     <AboutPage />
-    <ResumePage />
+    <ScrollView />
     <ContactPage />
     <MyComponent />
     <Filled />

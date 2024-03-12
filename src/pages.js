@@ -1,6 +1,5 @@
 // /src/pages.js
 
-import React from 'react';
 import scrollToAnchor from './scroll_anchor';
 import { Button, Image} from 'react-bootstrap';
 import myself from './assets/img/myself.jpg'
@@ -8,7 +7,9 @@ import './assets/css/style.css';
 import 'boxicons/css/boxicons.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { TypeAnimation } from 'react-type-animation';
-import { motion , useScroll } from "framer-motion"
+import { motion , useScroll, useAnimation } from "framer-motion"
+import { React, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Navbar = () => {
   return(
@@ -227,4 +228,35 @@ const ScrollAnimate = () => {
       />
   )
 };
-export { Navbar, HomePage, AboutPage, ResumePage, ContactPage, ScrollAnimate};
+
+const ScrollView = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0 }
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  return (
+    <motion.div
+      className="box"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
+      <ResumePage> </ResumePage>
+    </motion.div>
+  );
+};
+// https://blog.logrocket.com/react-scroll-animations-framer-motion/
+
+export { Navbar, HomePage, AboutPage, ResumePage, ContactPage, ScrollAnimate, ScrollView};
