@@ -18,9 +18,9 @@ root.render(
     <Navbar />
     <ScrollAnimate />
     <HomePage />
-    <AboutPage />
-    <ScrollView />
-    <ContactPage />
+    <ScrollView position={200} content={<AboutPage />}/>
+    <ScrollView position={200} content={<ResumePage />}/>
+    <ScrollView position={200} content={<ContactPage />}/>
     <MyComponent />
     <Filled />
     <Transition />

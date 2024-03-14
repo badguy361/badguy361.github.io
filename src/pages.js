@@ -120,7 +120,7 @@ const ResumePage = () => {
 
           <div className="section-title">
           <h2>簡歷(Resume)</h2>
-          <p>HI, 我是中央大學碩士二年級的學生，目前有接收網站開發任務，如有需求歡迎聯繫。</p>
+          <p>HI, 我是中央大學碩士二年級的學生，目前有接網站開發任務，如有需求歡迎聯繫。</p>
           </div>
 
           <div className="row">
@@ -180,7 +180,7 @@ const ContactPage = () => {
       <div className="container">
 
           <div className="section-title">
-          <h2>Contact</h2>
+          <h2>聯絡我</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
 
@@ -190,20 +190,20 @@ const ContactPage = () => {
               <div className="info">
               <div className="address">
                   <i className="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>地點:</h4>
+                  <p>新北市、台北市、桃園市</p>
               </div>
 
               <div className="email">
                   <i className="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>t1616joey1@gmail.com</p>
               </div>
 
               <div className="phone">
                   <i className="bi bi-phone"></i>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
+                  <p>+886 975 341 915</p>
               </div>
 
               </div>
@@ -229,12 +229,12 @@ const ScrollAnimate = () => {
   )
 };
 
-const ScrollView = () => {
+const ScrollView = ({position, content}) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
   const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, scale: 0 }
+    visible: { opacity: 1, y: 0 ,transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y: parseInt(position) }
   };
 
   useEffect(() => {
@@ -247,13 +247,12 @@ const ScrollView = () => {
 
   return (
     <motion.div
-      className="box"
       ref={ref}
       variants={boxVariant}
       initial="hidden"
       animate={control}
     >
-      <ResumePage> </ResumePage>
+      {content}
     </motion.div>
   );
 };
