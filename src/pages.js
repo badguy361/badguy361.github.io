@@ -10,6 +10,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion , useScroll, useAnimation } from "framer-motion"
 import { React, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
 const Navbar = () => {
   return(
@@ -205,9 +206,11 @@ const ContactPage = () => {
                   <h4>Call:</h4>
                   <p>+886 975 341 915</p>
               </div>
-
               </div>
+          </div>
 
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <Map></Map>
           </div>
 
           </div>
@@ -256,6 +259,41 @@ const ScrollView = ({position, content}) => {
     </motion.div>
   );
 };
-// https://blog.logrocket.com/react-scroll-animations-framer-motion/
+
+const Map = () => {
+  const libraries = ['places'];
+  const mapContainerStyle = {
+    width: '40vw',
+    height: '40vh',
+  };
+  const center = {
+    lat: 24.93,
+    lng: 121.37, 
+  };
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: 'AIzaSyB318Fh6o7ni_x1MlswE4vtD1hUReq0L_s',
+    libraries,
+  });
+
+  if (loadError) {
+    return <div>Error loading maps</div>;
+  }
+
+  if (!isLoaded) {
+    return <div>Loading maps</div>;
+  }
+
+  return (
+    <div>
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        zoom={10}
+        center={center}
+      >
+        <Marker position={center} />
+      </GoogleMap>
+    </div>
+  );
+};
 
 export { Navbar, HomePage, AboutPage, ResumePage, ContactPage, ScrollAnimate, ScrollView};
