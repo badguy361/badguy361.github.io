@@ -13,17 +13,18 @@ export default function Flip() {
   return (
     <div className={styles.container} onClick={() => set(state => !state)}>
       <a.div
-        className={`${styles.c} ${styles.back}`}
+        id="myself" 
         style={{ opacity: opacity.to(o => 1 - o), transform }}
       />
       <a.div
-        className={`${styles.c} ${styles.front}`}
+        id="myself2" 
         style={{
           opacity,
           transform,
           rotateX: '180deg',
         }}
-      />
+        />
+      
     </div>
   )
 }

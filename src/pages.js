@@ -6,38 +6,49 @@ import { React } from "react";
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import scrollToAnchor from './scroll_anchor';
 import myself from './assets/img/myself.jpg'
+import Flip from './flip';
 import './assets/css/style.css';
 import 'boxicons/css/boxicons.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
   return(
-    <header id="header">
-      <div className="d-flex flex-column">
-        <div className="profile">
-          <Image src={myself} roundedCircle/>
-          <h1 className="text-light">Joey</h1>
-          <div className="social-links mt-3 text-center">
-            <a href="https://www.facebook.com/profile.php?id=100003916017459"><i className="bx bxl-facebook-circle bx-md"></i></a>
-            <a href="https://github.com/badguy361"><i className="bx bxl-github bx-md"></i></a>
-            <a href="https://www.linkedin.com/in/chih-yu-chang-21aa32267/"><i className="bx bxl-linkedin bx-md"></i></a>
+    <>
+      <header id="header">
+        <div className="d-flex flex-column">
+          <div className="profile">
+            <Image src={myself} roundedCircle/>
+            <h1 className="text-light">Joey</h1>
+            <div className="social-links mt-3 text-center">
+              <a href="https://www.facebook.com/profile.php?id=100003916017459"><i className="bx bxl-facebook-circle bx-md"></i></a>
+              <a href="https://github.com/badguy361"><i className="bx bxl-github bx-md"></i></a>
+              <a href="https://www.linkedin.com/in/chih-yu-chang-21aa32267/"><i className="bx bxl-linkedin bx-md"></i></a>
+            </div>
+          </div>
+
+          <nav id="navbar" className="nav-menu navbar">
+            <ul>
+              <li className="bx bx-home"><Button variant="link" onClick={() => scrollToAnchor('hero')}><span>Home</span></Button></li>
+              <br></br>
+              <li className="bx bx-notepad"><Button variant="link" onClick={() => scrollToAnchor('resume')}><span>Resume</span></Button></li>
+              <br></br>
+              <li className="bx bx-message-dots"><Button variant="link" onClick={() => scrollToAnchor('contact')}><span>Contact</span></Button></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <footer id="footer">
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>iPortfolio</span></strong>
+          </div>
+          <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
-
-        <nav id="navbar" className="nav-menu navbar">
-          <ul>
-            <li className="bx bx-home"><Button variant="link" onClick={() => scrollToAnchor('hero')}><span>Home</span></Button></li>
-            <br></br>
-            <li className="bx bx-notepad"><Button variant="link" onClick={() => scrollToAnchor('resume')}><span>Resume</span></Button></li>
-            <br></br>
-            <li className="bx bx-code-block"><Button variant="link" onClick={() => scrollToAnchor('portfolio')}><span>Portfolio</span></Button></li>
-            <br></br>
-            <li className="bx bx-message-dots"><Button variant="link" onClick={() => scrollToAnchor('contact')}><span>Contact</span></Button></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+      </footer>
+    </>
   );
 };
 
@@ -75,7 +86,7 @@ const AboutPage = () => {
 
           <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
-            <Image id="myself" src={myself} rounded/>
+            <Flip></Flip>
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
               <h3>Data Analyst. &amp; Web Developer.</h3>

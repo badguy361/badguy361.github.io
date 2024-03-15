@@ -188,10 +188,31 @@ margin-bottom: 0;
 # About
 --------------------------------------------------------------*/
 .container #myself {
+    position: absolute;
     margin: 15px auto;
     display: block;
     width: 400px;
     height: 400px;
+    cursor: pointer;
+    will-change: transform, opacity;
+    background-image: url(../img/myself.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container #myself2 {
+    position: absolute;
+    margin: 15px auto;
+    display: block;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    will-change: transform, opacity;
+    background-image: url(../img/myself2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .about .content h3 {
@@ -471,6 +492,44 @@ margin-bottom: 0;
   }
 }
 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Animate
+--------------------------------------------------------------*/
 .progress-bar {
   position: fixed;
   top: 0;

@@ -9,7 +9,6 @@ import MyComponent from './move';
 import Filled from './filled';
 import Transition from './transition';
 import Colorbox from './color_box';
-import Flip from './flip';
 import { Navbar, HomePage, AboutPage , ResumePage , ContactPage} from './pages';
 import { ScrollAnimate, ScrollView } from './animate';
 
@@ -29,7 +28,6 @@ root.render(
     <br></br>
     <br></br>
     <br></br>
-    <Flip />
     <Colorbox />
     <div id='activity1'></div>
   </BrowserRouter>
