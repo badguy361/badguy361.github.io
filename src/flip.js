@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSpring, a } from '@react-spring/web'
+import { useSpring, animated } from '@react-spring/web'
 
 import styles from './assets/styles.module.css'
 
@@ -12,17 +12,13 @@ export default function Flip() {
   })
   return (
     <div className={styles.container} onClick={() => set(state => !state)}>
-      <a.div
+      <animated.div
         id="myself" 
         style={{ opacity: opacity.to(o => 1 - o), transform }}
       />
-      <a.div
+      <animated.div
         id="myself2" 
-        style={{
-          opacity,
-          transform,
-          rotateX: '180deg',
-        }}
+        style={{ opacity, transform, rotateX: '180deg' }}
         />
       
     </div>
