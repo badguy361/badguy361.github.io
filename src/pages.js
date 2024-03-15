@@ -1,16 +1,14 @@
 // /src/pages.js
 
-import scrollToAnchor from './scroll_anchor';
 import { Button, Image} from 'react-bootstrap';
+import { TypeAnimation } from 'react-type-animation';
+import { React } from "react";
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import scrollToAnchor from './scroll_anchor';
 import myself from './assets/img/myself.jpg'
 import './assets/css/style.css';
 import 'boxicons/css/boxicons.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { TypeAnimation } from 'react-type-animation';
-import { motion , useScroll, useAnimation } from "framer-motion"
-import { React, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
 const Navbar = () => {
   return(
@@ -221,45 +219,6 @@ const ContactPage = () => {
     )
 };
 
-const ScrollAnimate = () => {
-  const { scrollYProgress } = useScroll();
-
-  return(
-    <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress , background: "#37b3ed"}}
-      />
-  )
-};
-
-const ScrollView = ({position, content}) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  const boxVariant = {
-    visible: { opacity: 1, y: 0 ,transition: { duration: 0.8 } },
-    hidden: { opacity: 0, y: parseInt(position) }
-  };
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
-    >
-      {content}
-    </motion.div>
-  );
-};
-
 const Map = () => {
   const libraries = ['places'];
   const mapContainerStyle = {
@@ -271,7 +230,7 @@ const Map = () => {
     lng: 121.37, 
   };
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyB318Fh6o7ni_x1MlswE4vtD1hUReq0L_s',
+    googleMapsApiKey: 'AIzaSyAA-nLUpzL-m_ty-EM4Tii7ZJNejoid3Jw',
     libraries,
   });
 
@@ -296,4 +255,4 @@ const Map = () => {
   );
 };
 
-export { Navbar, HomePage, AboutPage, ResumePage, ContactPage, ScrollAnimate, ScrollView};
+export { Navbar, HomePage, AboutPage, ResumePage, ContactPage};
