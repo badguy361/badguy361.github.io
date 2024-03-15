@@ -1,5 +1,3 @@
-// /src/pages.js
-
 import { Button, Image} from 'react-bootstrap';
 import { TypeAnimation } from 'react-type-animation';
 import { React } from "react";
@@ -199,19 +197,19 @@ const ContactPage = () => {
           <div className="col-lg-5 d-flex align-items-stretch">
               <div className="info">
               <div className="address">
-                  <i className="bi bi-geo-alt"></i>
+                  <i className='bx bx-current-location' ></i>
                   <h4>地點:</h4>
                   <p>新北市、台北市、桃園市</p>
               </div>
 
               <div className="email">
-                  <i className="bi bi-envelope"></i>
+                  <i class='bx bx-envelope' ></i>
                   <h4>Email:</h4>
                   <p>t1616joey1@gmail.com</p>
               </div>
 
               <div className="phone">
-                  <i className="bi bi-phone"></i>
+                  <i class='bx bx-phone' ></i>
                   <h4>Call:</h4>
                   <p>+886 975 341 915</p>
               </div>

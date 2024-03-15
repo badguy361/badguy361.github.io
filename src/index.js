@@ -1,14 +1,9 @@
-// /src/index.js
 import reportWebVitals from './reportWebVitals';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './assets/index.css'
-import MyComponent from './move';
-import Filled from './filled';
-import Transition from './transition';
-import Colorbox from './color_box';
 import { Navbar, HomePage, AboutPage , ResumePage , ContactPage} from './pages';
 import { ScrollAnimate, ScrollView } from './animate';
 
@@ -21,15 +16,6 @@ root.render(
     <ScrollView position={200} content={<AboutPage />}/>
     <ScrollView position={200} content={<ResumePage />}/>
     <ScrollView position={200} content={<ContactPage />}/>
-    <MyComponent />
-    <Filled />
-    <Transition />
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <Colorbox />
-    <div id='activity1'></div>
   </BrowserRouter>
   
 );

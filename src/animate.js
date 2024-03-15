@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import './assets/css/style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 const ScrollAnimate = () => {
     const { scrollYProgress } = useScroll();
 
