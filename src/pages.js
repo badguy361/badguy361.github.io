@@ -79,7 +79,14 @@ const AboutPage = () => {
 
           <div className="section-title">
           <h2>關於我</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>HI, 我是中央大學碩士二年級的學生，目前有接網站開發任務，包括個人網站建立、企業網站建立等，如有需求歡迎聯繫。
+          <br />
+          <br />
+            我主要技能與專長是網站前後端、雲端、資料分析、自動化流程。
+            除上述的技能，我也有豐富的社團參與與團隊領導經驗，以及多次獲獎的實績。
+            這些經驗不僅代表我的技術實力，更顯示出我在團隊合作、領導以及解決問題上的能力。
+          </p>
+          <br />
           </div>
 
           <div className="row">
@@ -89,9 +96,9 @@ const AboutPage = () => {
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
               <h3>Data Analyst. &amp; Web Developer.</h3>
               <p className="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              過去的經驗使我不局限於某個職位或學識，使我不僅能夠靈活應對各種挑戰，也能夠跨越不同領域的限制，
               </p>
+              <br />
               <div className="row">
               <div className="col-lg-6">
                   <ul>
@@ -108,10 +115,7 @@ const AboutPage = () => {
                   </ul>
               </div>
               </div>
-              <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-              </p>
+              
           </div>
           </div>
       </div>
@@ -128,7 +132,6 @@ const ResumePage = () => {
 
           <div className="section-title">
           <h2>簡歷(Resume)</h2>
-          <p>HI, 我是中央大學碩士二年級的學生，目前有接網站開發任務，如有需求歡迎聯繫。</p>
           </div>
 
           <div className="row">
@@ -189,9 +192,8 @@ const ContactPage = () => {
 
           <div className="section-title">
           <h2>聯絡我</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
-
+          <p>目前有接網站開發任務，包括個人網站建立、企業網站建立等，如有需求歡迎聯繫。</p>
           <div className="row" data-aos="fade-in">
 
           <div className="col-lg-5 d-flex align-items-stretch">

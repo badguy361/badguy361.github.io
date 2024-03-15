@@ -90,6 +90,10 @@ background: #f5f8fd;
 padding-bottom: 30px;
 }
 
+#about .row {
+  height: 300px;
+}
+
 .section-title h2 {
 font-size: 32px;
 font-weight: bold;
@@ -192,7 +196,9 @@ margin-bottom: 0;
     margin: 15px auto;
     display: block;
     width: 400px;
-    height: 400px;
+    height: 300px;
+    top: 0;
+    margin: 0;
     cursor: pointer;
     will-change: transform, opacity;
     background-image: url(../img/myself.jpg);
@@ -206,7 +212,10 @@ margin-bottom: 0;
     margin: 15px auto;
     display: block;
     width: 400px;
-    height: 400px;
+    height: 300px;
+    padding: 0;
+    top: 0;
+    margin: 0;
     cursor: pointer;
     will-change: transform, opacity;
     background-image: url(../img/myself2.jpg);
