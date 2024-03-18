@@ -192,8 +192,7 @@ margin-bottom: 0;
 # About
 --------------------------------------------------------------*/
 .container #myself {
-    position: absolute;
-    margin: 15px auto;
+    position: relative;
     display: block;
     width: 400px;
     height: 300px;
@@ -208,8 +207,7 @@ margin-bottom: 0;
 }
 
 .container #myself2 {
-    position: absolute;
-    margin: 15px auto;
+    position: relative;
     display: block;
     width: 400px;
     height: 300px;
@@ -222,6 +220,13 @@ margin-bottom: 0;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.myself_container {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  position: relative;
 }
 
 .about .content h3 {
