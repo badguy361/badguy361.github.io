@@ -37,11 +37,11 @@ const Navbar = () => {
       </header>
 
       <footer id="footer">
-        <div class="container">
-          <div class="copyright">
+        <div className="container">
+          <div className="copyright">
             &copy; Copyright <strong><span>iPortfolio</span></strong>
           </div>
-          <div class="credits">
+          <div className="credits">
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
@@ -205,20 +205,20 @@ const ContactPage = () => {
               </div>
 
               <div className="email">
-                  <i class='bx bx-envelope' ></i>
+                  <i className='bx bx-envelope' ></i>
                   <h4>Email:</h4>
                   <p>t1616joey1@gmail.com</p>
               </div>
 
               <div className="phone">
-                  <i class='bx bx-phone' ></i>
+                  <i className='bx bx-phone' ></i>
                   <h4>Call:</h4>
                   <p>+886 975 341 915</p>
               </div>
               </div>
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
               <Map></Map>
           </div>
 
