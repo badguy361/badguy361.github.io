@@ -1,8 +1,8 @@
 export default function scrollToAnchor(anchorName) {
-
-    if (anchorName) {
-        let anchorElement = document.getElementById(anchorName);
-        if(anchorElement) { anchorElement.scrollIntoView({block: 'start', behavior: 'smooth'}); }
+  if (anchorName) {
+    const anchorElement = document.getElementById(anchorName);
+    if (anchorElement) {
+      anchorElement.scrollIntoView({block: 'start', behavior: 'smooth'});
     }
-
+  }
 }
